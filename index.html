@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <main>
+      <header class="ui-padding">
+        <div class="header-menu-one">
+          <img src="./images/logo.svg" alt="logo icon" />
+          <div>
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="header-menu-two">
+          <img src="./images/icon-cart.svg" alt="cart icon" />
+          <img width="60" src="./images/image-avatar.png" alt="avatar" />
+        </div>
+      </header>
+
+      <section class="ui-padding-2 product-section">
+        <div class="product-lightbox">
+          <img width="450" src="./images/image-product-1.jpg" alt="product" />
+          <div class="thumbnails">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="product thumbnail"
+            />
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="product thumbnail"
+            />
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="product thumbnail"
+            />
+            <img src="./images/image-product-4.jpg" alt="product thumbnail" />
+          </div>
+        </div>
+        <div class="product-description">
+          <p>Sneaker Company</p>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="product-price">
+            <h3>$125.00</h3>
+            <h4>50%</h4>
+          </div>
+          <h4><del>$250.00</del></h4>
+          <div class="buttons">
+            <div>
+              <img
+                id="btn-minus"
+                src="./images/icon-minus.svg"
+                alt="minus icon"
+              />
+              <p id="count-text" style="font-size: 1.1em; font-weight: 700">
+                0
+              </p>
+              <img id="btn-plus" src="./images/icon-plus.svg" alt="plus icon" />
+            </div>
+            <button>
+              <img src="./images/icon-cart.svg" alt="cart icon" />Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
