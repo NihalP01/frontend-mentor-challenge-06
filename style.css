@@ -227,3 +227,30 @@ button img {
   opacity: 0.5;
   border: 3px solid rgb(255, 123, 0);
 }
+
+.cart-details {
+  background-color: rgb(255, 255, 255);
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 94px;
+  right: 76px;
+  box-shadow: 0px 6px 28px -6px var(--grayish-blue);
+}
+
+.cart-details p {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.cart-details p:nth-child(3) {
+  text-align: center;
+  padding: 5rem;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--grayish-blue);
+}
+
+.hidden{
+  display: none;
+}
