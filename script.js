@@ -1,6 +1,8 @@
 const btnPlus = document.getElementById('btn-plus');
 const btnMinus = document.getElementById('btn-minus');
 const countText = document.getElementById('count-text');
+const cartBadgeCount = document.getElementById('cart-badge');
+const addToCartButton = document.getElementById('add-to-cart');
 
 let count = 0;
 
@@ -17,3 +19,9 @@ btnMinus.addEventListener('click', () => {
     countText.innerText = count;
   }
 });
+
+addToCartButton.addEventListener('click', () => {
+  cartBadgeCount.innerText = count
+});
+
+

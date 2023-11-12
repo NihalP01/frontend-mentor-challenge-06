@@ -32,6 +32,7 @@ a {
   padding: 2.5em 0;
   color: var(--grayish-blue);
   font-weight: 700;
+  border-bottom: 2px solid transparent;
 }
 
 a:hover {
@@ -39,7 +40,10 @@ a:hover {
   border-bottom: 2px solid var(--orange);
 }
 
-a:active {
+a:active,
+a:focus {
+  outline: none;
+  color: var(--black);
   border-bottom: 2px solid var(--orange);
 }
 
@@ -65,11 +69,31 @@ header {
 .header-menu-two {
   display: flex;
   align-items: center;
-  gap: 2em;
+  gap: 3em;
 }
 
 .header-menu-two img:first-child:hover {
   cursor: pointer;
+}
+
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -9px;
+  right: -11px;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 0.7em;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-menu-two img:nth-child(2) {
@@ -174,6 +198,10 @@ button {
   box-shadow: 0px 9px 26px -9px var(--orange);
 }
 
+button:hover {
+  opacity: 0.5;
+}
+
 button img {
   width: 18px;
   filter: brightness(0) invert(1);
@@ -195,6 +223,7 @@ button img {
   cursor: pointer;
 }
 
-.thumbnails img:hover{
-  filter: brightness();
+.thumbnails img:hover {
+  opacity: 0.5;
+  border: 3px solid rgb(255, 123, 0);
 }
