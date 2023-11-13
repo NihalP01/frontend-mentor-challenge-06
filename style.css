@@ -231,7 +231,7 @@ button img {
 .cart-details {
   display: none;
   background-color: rgb(255, 255, 255);
-  width: 330px;
+  width: 380px;
   flex-direction: column;
   position: absolute;
   top: 94px;
@@ -245,9 +245,21 @@ button img {
 }
 
 .cart-details p:nth-child(3) {
+  display: none;
   text-align: center;
   padding: 5rem;
   font-size: 1.1em;
   font-weight: 700;
   color: var(--grayish-blue);
+}
+
+.cart-items {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.cart-items img:nth-child(1){
+  border-radius: 0.6em;
 }

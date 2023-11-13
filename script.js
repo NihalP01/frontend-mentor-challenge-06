@@ -5,10 +5,13 @@ const cartBadgeCount = document.getElementById('cart-badge');
 const addToCartButton = document.getElementById('add-to-cart');
 const cartDetails = document.getElementById('cart-details');
 const cartButton = document.getElementById('btn-cart');
+const emptyCartMsg = document.getElementById('empty-cart-msg');
+const cartItems = document.getElementById('cart-items');
 
 let count = 0;
 
 updateCartBadgeVisibility();
+toggleEmptyCartMsg();
 
 btnPlus.addEventListener('click', () => {
   if (count < 10) {
@@ -27,6 +30,7 @@ btnMinus.addEventListener('click', () => {
 addToCartButton.addEventListener('click', () => {
   cartBadgeCount.innerText = count;
   updateCartBadgeVisibility();
+  toggleEmptyCartMsg();
 });
 
 function updateCartBadgeVisibility() {
@@ -47,3 +51,14 @@ cartButton.addEventListener('click', () => {
     cartDetails.style.display = 'none';
   }
 });
+
+function toggleEmptyCartMsg() {
+  if (count < 1) {
+    emptyCartMsg.style.display = 'flex';
+    cartItems.style.display = 'none';
+    
+  } else {
+    emptyCartMsg.style.display = 'none';
+    cartItems.style.display = 'flex';
+  }
+}
