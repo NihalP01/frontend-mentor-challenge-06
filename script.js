@@ -3,7 +3,7 @@ const btnMinus = document.getElementById('btn-minus');
 const countText = document.getElementById('count-text');
 const cartBadgeCount = document.getElementById('cart-badge');
 const addToCartButton = document.getElementById('add-to-cart');
-const cartDetails = document.getElementsByClassName('cart-details');
+const cartDetails = document.getElementById('cart-details');
 const cartButton = document.getElementById('btn-cart');
 
 let count = 0;
@@ -38,5 +38,12 @@ function updateCartBadgeVisibility() {
 }
 
 cartButton.addEventListener('click', () => {
-  
+  const currentDisplayStatus = window
+    .getComputedStyle(cartDetails)
+    .getPropertyValue('display');
+  if (currentDisplayStatus === 'none') {
+    cartDetails.style.display = 'flex';
+  } else {
+    cartDetails.style.display = 'none';
+  }
 });

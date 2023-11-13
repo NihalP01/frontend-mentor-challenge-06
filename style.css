@@ -229,13 +229,14 @@ button img {
 }
 
 .cart-details {
+  display: none;
   background-color: rgb(255, 255, 255);
   width: 330px;
-  display: flex;
   flex-direction: column;
   position: absolute;
   top: 94px;
   right: 76px;
+  border-radius: 0.8em;
   box-shadow: 0px 6px 28px -6px var(--grayish-blue);
 }
 
@@ -249,8 +250,4 @@ button img {
   font-size: 1.1em;
   font-weight: 700;
   color: var(--grayish-blue);
-}
-
-.hidden{
-  display: none;
 }
