@@ -232,16 +232,19 @@ button img {
   display: none;
   background-color: rgb(255, 255, 255);
   width: 380px;
+  /* height: 300px; */
   flex-direction: column;
   position: absolute;
   top: 94px;
   right: 76px;
   border-radius: 0.8em;
   box-shadow: 0px 6px 28px -6px var(--grayish-blue);
+  
 }
 
 .cart-details p {
   padding: 1rem 2rem 1rem 2rem;
+  justify-content: center;
 }
 
 .cart-details p:nth-child(3) {
@@ -258,8 +261,15 @@ button img {
   justify-content: space-between;
   align-items: center;
   padding: 0 1em;
+  margin-top: 1em;
 }
 
-.cart-items img:nth-child(1){
+.cart-items img:nth-child(1) {
   border-radius: 0.6em;
+}
+
+.btn-checkout {
+  justify-content: center;
+  margin: 1em 1em;
+  box-shadow: none;
 }
