@@ -10,6 +10,8 @@ const cartButton = document.getElementById('btn-cart');
 const emptyCartMsg = document.getElementById('empty-cart-msg');
 const cartItems = document.getElementById('cart-items');
 const priceDetails = document.getElementById('price-details');
+const itemCount = document.getElementById('item-count');
+const totalPrice = document.getElementById('total-price');
 
 let count = 0;
 
@@ -50,6 +52,8 @@ cartButton.addEventListener('click', () => {
     .getPropertyValue('display');
   if (currentDisplayStatus === 'none') {
     cartDetails.style.display = 'flex';
+    itemCount.innerText = count;
+    totalPrice.innerText = '$' + (count * 125) + '.00';
   } else {
     cartDetails.style.display = 'none';
   }
@@ -67,3 +71,10 @@ function toggleEmptyCartMsg() {
     checkoutButton.style.display = 'flex';
   }
 }
+
+removeFromCartButton.addEventListener('click', () => {
+  count = 0;
+  countText.innerText = count;
+  toggleEmptyCartMsg();
+  updateCartBadgeVisibility();
+});

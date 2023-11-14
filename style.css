@@ -88,8 +88,8 @@ header {
   background-color: var(--orange);
   color: white;
   border-radius: 0.7em;
-  padding: 2px 8px;
-  font-size: 12px;
+  padding: 1px 8px;
+  font-size: 11px;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -272,4 +272,8 @@ button img {
   justify-content: center;
   margin: 1em 1em;
   box-shadow: none;
+}
+
+#btn-delete{
+  cursor: pointer;
 }
