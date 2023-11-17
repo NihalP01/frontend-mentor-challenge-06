@@ -53,7 +53,7 @@ cartButton.addEventListener('click', () => {
   if (currentDisplayStatus === 'none') {
     cartDetails.style.display = 'flex';
     itemCount.innerText = count;
-    totalPrice.innerText = '$' + (count * 125) + '.00';
+    totalPrice.innerText = '$' + count * 125 + '.00';
   } else {
     cartDetails.style.display = 'none';
   }
@@ -77,4 +77,32 @@ removeFromCartButton.addEventListener('click', () => {
   countText.innerText = count;
   toggleEmptyCartMsg();
   updateCartBadgeVisibility();
+});
+
+const lightbox = document.querySelector('.product-lightbox');
+const thumbnails = document.querySelectorAll('.thumbnails img');
+const mainImage = document.querySelector('.product-lightbox img');
+
+// Function to open the lightbox
+function openLightbox(thumbnail) {
+  const src = thumbnail.getAttribute('src');
+  mainImage.setAttribute('src', src);
+  lightbox.classList.add('active');
+}
+
+// Function to close the lightbox
+function closeLightbox() {
+  lightbox.classList.remove('active');
+}
+
+// Add click event listeners to thumbnails
+for (const thumbnail of thumbnails) {
+  thumbnail.addEventListener('click', () => openLightbox(thumbnail));
+}
+
+// Add click event listener to lightbox overlay to close it
+lightbox.addEventListener('click', (event) => {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
 });
