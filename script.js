@@ -79,6 +79,7 @@ removeFromCartButton.addEventListener('click', () => {
   updateCartBadgeVisibility();
 });
 
+
 const lightbox = document.querySelector('.product-lightbox');
 const thumbnails = document.querySelectorAll('.thumbnails img');
 const mainImage = document.querySelector('.product-lightbox img');
