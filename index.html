@@ -1,127 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | E-commerce product page</title>
-  </head>
-  <body>
-    <main>
-      <header class="ui-padding">
-        <div class="header-menu-one">
-          <img src="./images/icon-menu.svg" alt="menu icon">
-          <img src="./images/logo.svg" alt="logo icon" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body>
+  <main>
+    <header class="ui-padding">
+      <div class="header-menu-one">
+        <img src="./images/icon-menu.svg" alt="menu icon">
+        <img src="./images/logo.svg" alt="logo icon" />
+        <div>
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="header-menu-two">
+        <div class="cart-icon-container">
+          <img id="btn-cart" src="./images/icon-cart.svg" alt="cart icon" />
+          <span id="cart-badge" class="cart-badge">0</span>
+        </div>
+        <img width="60" src="./images/image-avatar.png" alt="avatar" />
+      </div>
+      <div id="cart-details" class="cart-details">
+        <p style="font-size: 1.1em; font-weight: 700">Cart</p>
+        <hr />
+        <p id="empty-cart-msg">Your cart is empty</p>
+        <div id="cart-items" class="cart-items">
+          <img width="70" src="./images/image-product-1-thumbnail.jpg" alt="" />
           <div>
-            <a href="#">Collections</a>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <p id="price-details">
+              Fall Limited Edition Sneakers
+              <br />
+              $125.00 x <span id="item-count"></span>
+              <strong><span id="total-price"></span></strong>
+            </p>
           </div>
+          <img id="btn-delete" width="18" src="./images/icon-delete.svg" alt="delete icon" />
         </div>
-        <div class="header-menu-two">
-          <div class="cart-icon-container">
-            <img id="btn-cart" src="./images/icon-cart.svg" alt="cart icon" />
-            <span id="cart-badge" class="cart-badge">0</span>
-          </div>
-          <img width="60" src="./images/image-avatar.png" alt="avatar" />
-        </div>
-        <div id="cart-details" class="cart-details">
-          <p style="font-size: 1.1em; font-weight: 700">Cart</p>
-          <hr />
-          <p id="empty-cart-msg">Your cart is empty</p>
-          <div id="cart-items" class="cart-items">
-            <img
-              width="70"
-              src="./images/image-product-1-thumbnail.jpg"
-              alt=""
-            />
-            <div>
-              <p id="price-details">
-                Fall Limited Edition Sneakers
-                <br />
-                $125.00 x <span id="item-count"></span>
-                <strong><span id="total-price"></span></strong>
-              </p>
-            </div>
-            <img
-              id="btn-delete"
-              width="18"
-              src="./images/icon-delete.svg"
-              alt="delete icon"
-            />
-          </div>
-          <button id="btn-checkout" class="btn-checkout">Checkout</button>
-        </div>
-      </header>
+        <button id="btn-checkout" class="btn-checkout">Checkout</button>
+      </div>
+    </header>
 
-      <section class="ui-padding-2 product-section">
-        <div class="product-lightbox">
-          <img width="450" src="./images/image-product-1.jpg" alt="product" />
-          <div class="thumbnails">
-            <img
-              src="./images/image-product-1-thumbnail.jpg"
-              alt="product thumbnail"
-            />
-            <img
-              src="./images/image-product-2-thumbnail.jpg"
-              alt="product thumbnail"
-            />
-            <img
-              src="./images/image-product-3-thumbnail.jpg"
-              alt="product thumbnail"
-            />
-            <img src="./images/image-product-4-thumbnail.jpg" alt="product thumbnail" />
-          </div>
+    <section class="ui-padding-2 product-section">
+      <div class="product-lightbox">
+        <img width="450" src="./images/image-product-1.jpg" alt="product" />
+        <div class="thumbnails">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="product thumbnail" />
+          <img src="./images/image-product-2-thumbnail.jpg" alt="product thumbnail" />
+          <img src="./images/image-product-3-thumbnail.jpg" alt="product thumbnail" />
+          <img src="./images/image-product-4-thumbnail.jpg" alt="product thumbnail" />
         </div>
-        <div class="product-description">
-          <p>Sneaker Company</p>
-          <h1>Fall Limited Edition Sneakers</h1>
-          <p>
-            These low-profile sneakers are your perfect casual wear companion.
-            Featuring a durable rubber outer sole, they'll withstand everything
-            the weather can offer.
-          </p>
+      </div>
+      <div class="product-description">
+        <p>Sneaker Company</p>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+        <div class="product-price-mobile">
           <div class="product-price">
             <h3>$125.00</h3>
             <h4>50%</h4>
           </div>
           <h4><del>$250.00</del></h4>
-          <div class="buttons">
-            <div>
-              <img
-                id="btn-minus"
-                src="./images/icon-minus.svg"
-                alt="minus icon"
-              />
-              <p id="count-text" style="font-size: 1.1em; font-weight: 700">
-                0
-              </p>
-              <img id="btn-plus" src="./images/icon-plus.svg" alt="plus icon" />
-            </div>
-            <button id="add-to-cart">
-              <img src="./images/icon-cart.svg" alt="cart icon" />Add to cart
-            </button>
-          </div>
         </div>
-      </section>
-    </main>
-    <script src="./script.js"></script>
-  </body>
+        <div class="buttons">
+          <div>
+            <img id="btn-minus" src="./images/icon-minus.svg" alt="minus icon" />
+            <p id="count-text" style="font-size: 1.1em; font-weight: 700">
+              0
+            </p>
+            <img id="btn-plus" src="./images/icon-plus.svg" alt="plus icon" />
+          </div>
+          <button id="add-to-cart">
+            <img src="./images/icon-cart.svg" alt="cart icon" />Add to cart
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
 </html>
