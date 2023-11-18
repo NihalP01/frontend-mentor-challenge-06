@@ -350,9 +350,11 @@ button img {
     justify-content: center;
   }
   .cart-details {
-    width: 353px;
-    top: 80px;
-    right: 4px;
+    max-width: 400px;
+    width: 100%;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .product-price-mobile {
     display: flex;
