@@ -80,7 +80,7 @@ header {
   display: none;
 }
 
-.mobile-nav {
+.mobile-menu-links {
   display: none;
 }
 
@@ -294,6 +294,15 @@ button img {
 }
 
 @media screen and (max-width: 600px) {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
   header {
     height: 70px;
     border-bottom: none;
@@ -305,7 +314,7 @@ button img {
   .header-menu-one > div {
     gap: 1em;
   }
-  .mobile-nav {
+  .mobile-menu-links {
     display: none;
   }
   #menu-icon {
@@ -322,8 +331,8 @@ button img {
     height: 100%;
     background-color: var(--white);
     color: var(--very-dark-blue);
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
     display: flex;
     flex-direction: column;
     padding: 1.5em;
@@ -388,6 +397,8 @@ button img {
     width: 100%;
     height: 300px;
     overflow: hidden;
+    z-index: -1;
+    margin-top: -33px;
   }
   .product-lightbox > img {
     width: 100%;
@@ -426,12 +437,12 @@ button img {
     margin: 0;
   }
   .image-action {
-    position: absolute;
-    top: 32%;
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 0 0.5em;
+    position: relative;
+    top: 50%;
   }
   .image-action img {
     background-color: var(--white);

@@ -15,6 +15,8 @@ const totalPrice = document.getElementById('total-price');
 const btnMenu = document.getElementById('menu-icon');
 const mobileMenu = document.getElementById('mobile-menu');
 const btnClose = document.getElementById('btn-close');
+const overlay = document.getElementById('overlay')
+
 
 let count = 0;
 
@@ -24,11 +26,13 @@ toggleEmptyCartMsg();
 btnMenu.addEventListener('click', () => {
   mobileMenu.style.display = 'flex';
   mobileMenu.style.left = 0;
+  overlay.style.display = 'flex';
 });
 
 btnClose.addEventListener('click', () => {
   mobileMenu.style.display = 'none';
   mobileMenu.style.left = '-300px';
+  overlay.style.display = 'none';
 });
 
 btnPlus.addEventListener('click', () => {
