@@ -12,11 +12,24 @@ const cartItems = document.getElementById('cart-items');
 const priceDetails = document.getElementById('price-details');
 const itemCount = document.getElementById('item-count');
 const totalPrice = document.getElementById('total-price');
+const btnMenu = document.getElementById('menu-icon');
+const mobileMenu = document.getElementById('mobile-menu');
+const btnClose = document.getElementById('btn-close');
 
 let count = 0;
 
 updateCartBadgeVisibility();
 toggleEmptyCartMsg();
+
+btnMenu.addEventListener('click', () => {
+  mobileMenu.style.display = 'flex';
+  mobileMenu.style.left = 0;
+});
+
+btnClose.addEventListener('click', () => {
+  mobileMenu.style.display = 'none';
+  mobileMenu.style.left = '-300px';
+});
 
 btnPlus.addEventListener('click', () => {
   if (count < 10) {
@@ -78,7 +91,6 @@ removeFromCartButton.addEventListener('click', () => {
   toggleEmptyCartMsg();
   updateCartBadgeVisibility();
 });
-
 
 const lightbox = document.querySelector('.product-lightbox');
 const thumbnails = document.querySelectorAll('.thumbnails img');

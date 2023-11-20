@@ -294,6 +294,9 @@ button img {
     left: 0;
     background-color: var(--white);
   }
+  .header-menu-one > div{
+    gap: 1em;
+  }
   .mobile-nav {
     display: none;
   }
@@ -303,7 +306,7 @@ button img {
   .mobile-menu-links {
     position: fixed;
     top: 0;
-    right: -300px;
+    left: -300px;
     width: 250px;
     height: 100%;
     background-color: var(--white);
@@ -312,6 +315,7 @@ button img {
     z-index: 1000;
     display: flex;
     flex-direction: column;
+    padding: 1.5em;
   }
   .mobile-menu-links > div {
     display: flex;
@@ -320,8 +324,14 @@ button img {
     position: absolute;
     padding: 1rem;
   }
-  .mobile-menu-links-open {
-    right: 0;
+  .mobile-menu-links > a{
+    padding: 0;
+    color: var(--very-dark-blue);
+    font-weight: 700;
+    width: fit-content;
+  }
+  .mobile-menu-links img{
+    margin-bottom: 2em;
   }
   .ui-padding {
     padding: 0 1em;
